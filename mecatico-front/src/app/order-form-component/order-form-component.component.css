@@ -2,16 +2,20 @@ form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
-input[type="text"] {
+
+input[type="text"],
+select[multiple] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -19,6 +23,20 @@ input[type="text"] {
     border-radius: 5px;
     box-sizing: border-box;
 }
+
+
+input[type="text"]:focus,
+select[multiple]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.containe-button {
+    display: flex;
+    flex-direction: column;
+}
+
 button[type="submit"] {
     background-color: #007bff;
     color: white;
@@ -27,7 +45,31 @@ button[type="submit"] {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
+    margin: 10px 0px;
 }
+
+button[type="button"] {
+    background-color: #04bd329c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0px;
+}
+
+
 button[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+button[type="button"]:hover {
+    background-color: #0496299c;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
 }
